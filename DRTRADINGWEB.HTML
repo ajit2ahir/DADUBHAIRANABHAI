@@ -1,0 +1,306 @@
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DR Trading</title>
+
+  <style>
+
+         .container{
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 250px;
+          padding: 12px 12px;
+          }
+    body {
+
+      margin: 0;
+
+      font-family: 'Poppins', sans-serif;
+
+      background-color: #fdfaf6;
+      padding-top: 90px;
+    }
+
+
+    /* Header styling with semi-transparent gradient over onion image */
+
+    header {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 999;
+              
+    background:linear-gradient(135deg, rgba(139,69,19,0.6), rgba(210,105,30,0.6)),
+
+        url("onion-bg.jpeg") center/cover no-repeat;
+      background-blend-mode: overlay;
+
+      color: white;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      padding: 15px 30px;
+
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+
+      opacity: 0;
+
+      animation: fadeIn 1s ease forwards;
+
+    }
+
+
+    /* Logo */
+
+    .logo {
+
+      display: flex;
+
+      align-items: center;
+
+      margin-left: -70px;
+      gap: 10px;
+
+      transform: translateX(-100px);
+
+      opacity: 0;
+
+      animation: slideInLogo 1s ease forwards 0.4s;
+
+    }
+
+
+    .logo img {
+
+     max-height: 60px;
+
+      width: auto;
+
+      border-radius: 50%;
+
+      border: 2px solid #fff;
+
+      box-shadow: 0 0 10px rgba(255,255,255,0.6);
+
+    }
+
+
+    .logo h1 {
+
+      font-size: 30px;
+
+      font-weight: bold;
+
+      color: #fffbea;
+
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+
+    }
+
+
+    /* Navigation */
+
+    nav ul {
+
+      list-style: none;
+
+      display: flex;
+
+      flex-wrap: nowrap;
+      gap: 10px;
+
+      margin: 15px;
+
+      padding: 0;
+
+      transform: translateX(100px);
+
+      opacity: 0;
+
+      animation: slideInMenu 1s ease forwards 0.8s;
+
+    }
+
+
+    nav ul li a {
+
+      text-decoration: none;
+      color: black;
+
+      font-size: 30px;
+
+      font-weight: 600;
+
+      position: relative;
+
+      transition: all 0.3s ease;
+
+    }
+
+
+    nav ul li a::after {
+
+      content: "";
+ 
+     position: absolute;
+
+      bottom: -4px;
+
+      left: 0;
+      width: 0%;
+
+      height: 2px;
+
+      background: gold;
+
+      transition: width 0.3s;
+
+    }
+
+
+    nav ul li a:hover::after {
+
+      width: 100%;
+    
+}
+
+
+    nav ul li a:hover {
+
+      color: #fffacd;
+
+      transform: scale(1.1);
+
+    }
+
+
+    /* Keyframes */
+
+    @keyframes fadeIn {
+
+      from {
+ opacity: 0;
+ transform: translateY(-20px);
+ }
+
+      to {
+ opacity: 1;
+ transform: translateY(0);
+ }
+
+    }
+
+    @keyframes slideInLogo {
+
+      from {
+ opacity: 0;
+ transform: translateX(-100px);
+ }
+
+      to {
+ opacity: 1;
+ transform: translateX(0);
+ }
+
+    }
+
+    @keyframes slideInMenu{
+
+      from {
+ opacity: 0;
+ transform: translateX(100px);
+ }
+
+      to {
+ opacity: 1;
+ transform: translateX(0);
+ }
+
+    }
+
+
+    /* Responsive */
+
+    @media (max-width: 700px) {
+
+      header {
+
+        flex-direction: column;
+
+        padding: 25px;
+ 
+       text-align: center;
+
+      }
+
+      nav ul {
+ 
+       flex-direction: column;
+
+        gap: 15px;
+
+      }
+
+    }
+ 
+     /* keep anchor targets visible below the fixed header */
+      section, header, .anchor-target{
+      scroll-margin-top: 110px;
+       }
+ </style>
+
+</head>
+
+<body>
+
+
+      <div id="top"></div>
+  <header>
+ 
+   <div class="container">
+   <div class="logo">
+  
+    
+     <img src="dr trading logo.jpeg" alt="DR Trading Logo">
+ 
+     <h1>DADUBHAI RANABHAI </h1>
+ 
+   </div>
+
+    <nav>
+ 
+     <ul>
+
+        <li><a href="#top">Home</a></li>
+
+        <li><a href="#">Products</a></li>
+ 
+       <li><a href="#">About Us</a></li>
+
+        <li><a href="#">Contact Us</a></li>
+  
+    </ul>
+
+    </nav>
+
+  </header>
+
+
+</body>
+
+</html>
